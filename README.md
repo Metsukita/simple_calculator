@@ -1,56 +1,40 @@
 # Basic Calculator Application
 
-This is a simple calculator application that performs basic arithmetic operations such as addition, subtraction, multiplication, and division.
+This is a simple calculator application that performs basic arithmetic operations such as addition, subtraction, multiplication, division, power, square root, and absolute value. It includes both a command-line interface and a modern graphical interface using ttkbootstrap.
 
 ## Project Structure
 
 ```
 calculator-app
 ├── src
-│   ├── calculator.py       # Contains the Calculator class with arithmetic methods
-│   ├── calculator_gui.py   # Contains the code for the graphical user interface
-│   └── __init__.py         # Marks the src directory as a package
+│   ├── calculator.py         # Calculator class with arithmetic methods
+│   ├── calculator_gui.py     # Graphical interface using ttkbootstrap
+│   └── __init__.py           # Marks the src directory as a package
 ├── tests
-│   └── test_calculator.py   # Unit tests for the Calculator class
-├── requirements.txt         # Lists project dependencies
-└── README.md                # Project documentation
+│   └── test_calculator.py    # Unit tests for the Calculator class
+├── requirements.txt          # Project dependencies
+└── README.md                 # Project documentation
 ```
 
 ## Installation
 
-To install the required dependencies, run the following command:
+To install the required dependencies, run:
 
 ```
 pip install -r requirements.txt
 ```
 
-## Usage
+## Usage (Command Line)
 
-To use the calculator, you can import the `Calculator` class from the `src.calculator` module in your Python scripts:
-
-```python
-from src.calculator import Calculator
-
-calc = Calculator()
-result = calc.add(5, 3)
-print(result)  # Output: 8
-```
-
-## Running Tests
-
-To run the unit tests for the Calculator class, use the following command:
+To use the calculator in the terminal, run:
 
 ```
-pytest tests/test_calculator.py
+python src/calculator.py
 ```
 
-Make sure you have `pytest` installed, which can be added to your `requirements.txt` file.
+Follow the on-screen instructions to perform calculations.
 
-## Graphical User Interface (GUI)
-
-This project also includes a graphical calculator using Tkinter.
-
-### Running the Visual Calculator
+## Usage (Graphical Interface)
 
 To launch the visual calculator, run:
 
@@ -58,14 +42,17 @@ To launch the visual calculator, run:
 python src/calculator_gui.py
 ```
 
-A window will open com botões para números, operações básicas, potência (^), raiz quadrada (√) e valor absoluto (|x|).
+A window will open with buttons for numbers, basic operations, power (^), square root (√), and absolute value (|x|). You can change the theme by editing the `themename` parameter in the code.
 
-### Example
+## Running Tests
 
-- Clique nos botões para montar a expressão e pressione '=' para ver o resultado.
-- Para raiz quadrada ou valor absoluto, digite o número e clique no respectivo botão.
+To run the unit tests for the Calculator class, use:
 
-> Requer Python com Tkinter (já incluso na maioria das instalações padrão).
+```
+pytest tests/test_calculator.py
+```
+
+Make sure you have `pytest` installed.
 
 ## License
 
