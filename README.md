@@ -8,6 +8,7 @@ This is a simple calculator application that performs basic arithmetic operation
 calculator-app
 ├── src
 │   ├── calculator.py       # Contains the Calculator class with arithmetic methods
+│   ├── calculator_gui.py   # Contains the code for the graphical user interface
 │   └── __init__.py         # Marks the src directory as a package
 ├── tests
 │   └── test_calculator.py   # Unit tests for the Calculator class
@@ -44,6 +45,27 @@ pytest tests/test_calculator.py
 ```
 
 Make sure you have `pytest` installed, which can be added to your `requirements.txt` file.
+
+## Graphical User Interface (GUI)
+
+This project also includes a graphical calculator using Tkinter.
+
+### Running the Visual Calculator
+
+To launch the visual calculator, run:
+
+```
+python src/calculator_gui.py
+```
+
+A window will open com botões para números, operações básicas, potência (^), raiz quadrada (√) e valor absoluto (|x|).
+
+### Example
+
+- Clique nos botões para montar a expressão e pressione '=' para ver o resultado.
+- Para raiz quadrada ou valor absoluto, digite o número e clique no respectivo botão.
+
+> Requer Python com Tkinter (já incluso na maioria das instalações padrão).
 
 ## License
 
